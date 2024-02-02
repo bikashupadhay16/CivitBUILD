@@ -36,20 +36,26 @@
             width: 100%;
         }
 
-        .slider-item {
+        .loading-item {
+            width: 50px; /* Adjusted width */
+            height: 50px; /* Adjusted height */
             background-color: #4285f4; /* Blue background */
             color: #fff; /* White text color */
-            border-radius: 10px; /* Rounded corners */
-            padding: 20px;
+            border-radius: 50%; /* Circular shape */
             text-align: center;
+            line-height: 50px; /* Center content vertically */
+            margin: 0 10px; /* Adjusted margin */
+            border: 2px solid #4285f4; /* Blue border */
+            animation: spin 1s infinite linear; /* Added loading animation */
         }
 
-        .slider-item-green {
-            background-color: #34a853; /* Green background for starting step */
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
 
         h1 {
-            color: #4285f4; /* Blue text color */
+            color: #000; /* Black text color */
         }
 
         p {
@@ -96,10 +102,10 @@
 
     <div class="slider-container">
         <div class="slider">
-            <div class="slider-item slider-item-green">A</div>
-            <div class="slider-item">B</div>
-            <div class="slider-item">C</div>
-            <div class="slider-item">D</div>
+            <div class="loading-item"></div>
+            <div class="loading-item"></div>
+            <div class="loading-item"></div>
+            <div class="loading-item"></div>
         </div>
     </div>
 
@@ -119,3 +125,5 @@
     </script>
 </body>
 </html>
+
+
