@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to CivitBUILD!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css"> <!-- Added Tiny Slider CSS -->
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .welcome-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 50vh; /* Adjusted height */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Added box shadow */
+        }
+
+        .slider-container {
+            width: 80%;
+            max-width: 400px; /* Adjusted max-width */
+            margin-top: 20px; /* Adjusted margin */
+            margin-bottom: 20px; /* Adjusted margin */
+        }
+
+        .slider {
+            width: 100%;
+        }
+
+        .slider-item {
+            background-color: #4285f4; /* Blue background */
+            color: #fff; /* White text color */
+            border-radius: 10px; /* Rounded corners */
+            padding: 20px;
+            text-align: center;
+        }
+
+        .slider-item-green {
+            background-color: #34a853; /* Green background for starting step */
+        }
+
+        h1 {
+            color: #4285f4; /* Blue text color */
+        }
+
+        p {
+            color: #666;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        .next-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px; /* Adjusted margin */
+        }
+
+        .next-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4285f4; /* Blue background */
+            color: #fff; /* White text color */
+            text-decoration: none;
+            border: 2px solid #4285f4; /* Blue border */
+            border-radius: 10px; /* Adjusted border radius */
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .next-button:hover {
+            background-color: #1a73e8;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="welcome-container">
+        <h1>Welcome to CivitBUILD!</h1>
+        <p>We are excited to have you onboard. Start your journey with a quick guided tour to get a glimpse of all of CivitBUILD's exciting features.</p>
+        
+        <div class="next-container">
+            <div class="next-button" onclick="location.href='#'">Next</div>
+        </div>
+    </div>
+
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slider-item slider-item-green">A</div>
+            <div class="slider-item">B</div>
+            <div class="slider-item">C</div>
+            <div class="slider-item">D</div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/min/tiny-slider.js"></script> <!-- Added Tiny Slider JS -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+            var slider = tns({
+                container: '.slider',
+                items: 1,
+                controls: false,
+                nav: false,
+                autoplay: false,
+                mouseDrag: true,
+                startIndex: 0 // Set the starting index to 0 for the first item
+            });
+        });
+    </script>
+</body>
+</html>
